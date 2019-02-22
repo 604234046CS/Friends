@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import { Component } from '@angular/core';
+import { FriendlistPage } from '../friendlist/friendlist';
 
 @Component({
   selector: 'page-home',
@@ -11,4 +12,10 @@ export class HomePage {
 
   }
 
+  showFriendList(major:string){
+    
+    this.navCtrl.push(FriendlistPage, 
+      {major:major}
+      );
+  }
 }
